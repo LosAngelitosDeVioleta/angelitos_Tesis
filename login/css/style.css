@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #c2e59c;
+    background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c);
+    background: linear-gradient(to right, #64b3f4, #c2e59c);
+    padding: 20px;
+}
+
+.ctn-all {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.ctn-form {
+    width: 80%;
+    padding: 40px;
+    background-color: #f7f7f7;
+}
+
+.logo {
+    display: block;
+    width: 150px;
+    margin: auto;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.6em !important;
+    padding: 20px;
+    font-weight: 600;
+    color: #3b3b3b;
+}
+
+label {
+    display: block;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #3b3b3b;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    color: #0080FF;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    border-bottom: 2px solid #1aa5db;
+}
+
+button[type="submit"] {
+    width: 100%;
+    height: 50px;
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1aa5db;
+    border: 2px solid #1aa5db;
+    border-radius: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    font-size: 22px;
+    background-color: #1aa5db;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 128, 255, 0.4);
+    transform: translateY(-3px);
+}
+
+.recovery {
+    display: block;    
+    text-align: center;      
+    margin-top: 30px;        
+    color: #1d8eff;         
+    text-decoration: none; 
+    font-weight: 500;          
+    transition: 0.3s ease;      
+}
+
+.recovery:hover {
+    color: #0056b3;         
+    text-decoration: underline; 
+}
+
+.text-footer {
+    display: block;
+    margin-top: 80px;
+    text-align: center;
+    color: #3b3b3b;
+    font-weight: 300;
+}
+
+.link{
+    color: #029ee1 !important;
+    font-weight: 500;
+}
+
+/* Lado derecho */
+
+.ctn-text {
+    width: 100%;
+    position: relative;
+    background-image: url(../images/fondo.jpeg);
+    background-position: center;
+    background-size: cover;
+    padding: 40px;
+}
+
+.capa {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.capa::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #014688, #2587d8);
+    opacity: 0.7;
+    z-index: 0;
+}
+
+.title-description,
+.text-description {
+    position: relative;
+    z-index: 1;
+    color: white;
+    margin: 0;
+}
+
+
+.title-description {
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.text-description {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-weight: 400;
+    max-width: 700px;
+}
+
+/* Ojito para ver y ocultar contraseña */
+
+.campo-password {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.toggle-password i {
+    font-size: 20px;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.toggle-password:hover i {
+    transform: scale(1.2);
+}
+
+/* Texto de error */
+
+.msg-error {
+    display: block;
+    margin-top: 10px;
+    color: red;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 800px) {
+
+    .ctn-text {
+        display: none;
+    }
+
+    .ctn-form {
+        margin: auto;
+        width: 100%;
+    }
+}
